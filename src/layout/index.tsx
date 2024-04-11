@@ -1,15 +1,15 @@
-import { routes } from "@/routes/routes";
-import Sidebar from "./sidebar";
-import { Routes, Route } from "react-router-dom";
+import {routes} from '@/routes/routes'
+import Sidebar from './sidebar'
+import {Routes, Route} from 'react-router-dom'
 
-import Footer from "./footer";
-import Navbar from "./navbar";
+import Footer from './footer'
+import Navbar from './navbar'
 
 export function MainLayout() {
   return (
-    <div className="min-h-screen bg-blue-gray-50/50">
+    <div className='min-h-screen relative bg-blue-gray-50/50'>
       <Sidebar routes={routes} />
-      <div className="p-4 xl:ml-80">
+      <div className='p-4 xl:ml-80'>
         <Navbar />
         {/* <Configurator /> */}
 
@@ -24,18 +24,18 @@ export function MainLayout() {
           </IconButton> */}
 
         <Routes>
-          {routes.map(({ pages }) =>
-            pages.map(({ path, element }, index) => (
+          {routes.map(({pages}) =>
+            pages.map(({path, element}, index) => (
               <Route key={index} path={path} element={element} />
             ))
           )}
         </Routes>
-        <div className="text-blue-gray-600">
+        <div className='text-blue-gray-600'>
           <Footer />
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default MainLayout;
+export default MainLayout
