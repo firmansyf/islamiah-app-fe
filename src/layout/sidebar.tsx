@@ -17,11 +17,11 @@ export default function Sidebar({routes}: any) {
       <aside
         className={`${sidenavTypes[sidenavType]} ${
           openSidenav ? 'translate-x-0' : '-translate-x-80'
-        } fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-72 rounded-xl transition-transform duration-300 xl:translate-x-0 border border-blue-gray-100`}
+        } fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-72 rounded-xl transition-transform duration-300 xl:translate-x-0 border border-blue-gray-100 bg-[#fefee3]`}
       >
         <div className={`relative`}>
           <section className='py-4 px-4 text-center flex justify-start items-center gap-5 border-b-2'>
-            <h1 className='font-semibold text-xl tracking-tight'>
+            <h1 className='font-semibold text-xl text-[#2c6e49] tracking-tight'>
               Islam App <sup className='text-normal'>ID</sup>
             </h1>
           </section>
@@ -47,10 +47,11 @@ export default function Sidebar({routes}: any) {
                     <Button
                       onClick={() => setOpenSidenav(dispatch, false)}
                       size='sm'
-                      className='primary flex items-center gap-2'
+                      className=''
+                      style={{backgroundColor: 'transparent', color: '#4c956c'}}
                     >
                       {icon}
-                      <span className='capitalize'>{name}</span>
+                      <span className='capitalize mx-1'>{name}</span>
                     </Button>
                   </Link>
                 </li>

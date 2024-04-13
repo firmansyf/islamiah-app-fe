@@ -18,19 +18,23 @@ export function Navbar() {
   const [layout, _] = pathname.split('/').filter((el) => el !== '')
 
   return (
-    <nav className='rounded-xl bg-white translate-all sticky top-4 z-40 p-5 shadow-md shadow-blue-gray-500/5 mb-4'>
+    <nav className='rounded-xl bg-[#fefee3] translate-all sticky top-4 z-40 p-5 shadow-md shadow-blue-gray-500/5 mb-4'>
       <div className='flex flex-col-reverse justify-between gap-6 md:flex-row md:items-center'>
         <div className='capitalize'>
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink href='/' className='font-semibold'>
+                <BreadcrumbLink href='/' className='font-semibold text-[#d68c45]'>
                   Dashboard
                 </BreadcrumbLink>
               </BreadcrumbItem>
-              <BreadcrumbSeparator>{layout !== undefined && <Slash />}</BreadcrumbSeparator>
+              <BreadcrumbSeparator className='text-[#2c6e49]'>
+                {layout !== undefined && <Slash />}
+              </BreadcrumbSeparator>
               <BreadcrumbItem>
-                <BreadcrumbLink>{layout !== undefined ? layout : ''}</BreadcrumbLink>
+                <BreadcrumbLink className='text-[#d68c45]'>
+                  {layout !== undefined ? layout : ''}
+                </BreadcrumbLink>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>

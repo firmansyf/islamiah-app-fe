@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className='py-2 mt-4'>
       <div className='flex w-full flex-wrap items-center justify-center gap-6 px-2'>
-        <span className='text-sm font-semibold text-inherit'>
+        <span className='text-sm text-slate-500 text-inherit tracking-wide'>
           &copy; {year} Islamiah Application
         </span>
       </div>
